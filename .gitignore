@@ -1,0 +1,14 @@
+.metadata/
+Servers/
+# Archivos y carpetas de compilación
+**/target/
+**/build/
+
+# Archivos de configuración de Eclipse
+**/.classpath
+**/.project
+**/.settings/
+
+# Archivos de sistema
+**/.DS_Store
+**/Thumbs.db
