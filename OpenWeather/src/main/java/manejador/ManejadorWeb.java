@@ -83,7 +83,7 @@ public class ManejadorWeb extends DefaultHandler {
 		super.startElement(uri, localName, qName, attributes);
 		if (localName.equals("dia")) {
 			dia = new Dia();
-			dia.setFecha(attributes.getValue("fecha"));
+			dia.setFrom(attributes.getValue("fecha"));
 		}
 		else if (localName.equals("temperatura")) {
 			isTemp = true;
