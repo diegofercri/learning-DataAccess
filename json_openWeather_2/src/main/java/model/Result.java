@@ -28,5 +28,4 @@ public class Result {
 		return "Result [list=" + list + "]";
 	}
 	
-
 }

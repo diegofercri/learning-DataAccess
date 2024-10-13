@@ -1,0 +1,233 @@
+:root {
+    --c0: #fffbf3;
+    --c1: #fef0d7;
+    --c2: #ffedcd;
+    --c3: #fdeac4;
+    --c4: #e9d09f;
+    --c5: #f8b376;
+    --c6: #f67c5a;
+    --c7: #252525;
+    --c8: #505050;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: 'Outfit', sans-serif !important;
+    letter-spacing: 2px !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--c6) var(--c7);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--c7);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--c6);
+    border-radius: 5px;
+    border: 3px solid var(--c7);
+}
+
+::-webkit-scrollbar-button {
+    height: 5px;
+}
+
+body {
+    min-height: 100vh;
+    min-width: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(60deg, var(--c5), var(--c6));
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+footer .card {
+    min-height: 0px;
+    min-width: 0px;
+}
+
+footer .card-content {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: lowercase;
+    text-align: center;
+  }
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+    color: var(--c7);
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    color: var(--c7);
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--c7);
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--c7);
+}
+
+h5 {
+    text-align: center;
+    font-size: 1em;
+    color: var(--c6);
+}
+
+h6 {
+    text-align: center;
+    font-size: 0.5em;
+    color: var(--c7);
+}
+
+p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--c6);
+}
+
+a {
+    font-size: 1em;
+    color: var(--c6);
+    text-decoration: none;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.card {
+  background-color: var(--c7);
+  border: var(--c7) solid 1px;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 100px;
+  min-width: 300px;
+  max-height: 200px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  scale: 1.03;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-title {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap; /* Evita saltos de línea */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.card-content {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* Limitar a 1 líneas */
+  line-clamp: 1; /* Limitar a 1 líneas por compatibilidad */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Ajustar la altura de línea */
+  max-height: calc(1.5em * 1); /* Ajustar el alto máximo al número de líneas */
+}
+
+.card-image {
+  background-color: var(--c7);
+  border: var(--c7) solid 1px;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 100px;
+  min-width: 300px;
+  max-height: 500px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-image:hover {
+  cursor: pointer;
+  scale: 1.03;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-image-container {
+  margin-bottom: 18px;
+  width: 276px;
+  height: 276px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image-title {
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.card-image-description {
+  margin-top: 5px;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Limitar a 3 líneas */
+  line-clamp: 3; /* Limitar a 3 líneas por compatibilidad */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Ajustar la altura de línea */
+  max-height: calc(1.5em * 3); /* Ajustar el alto máximo al número de líneas */
+}
