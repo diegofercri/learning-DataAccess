@@ -55,9 +55,18 @@
 					</form>
 				</div>
 				<div class="col-md-1">
-					<a href="Controller?op=vafav" class="text-decoration-none"> <span
-						class="text-warning fs-1">&#9733;</span>
-					</a>
+					<c:choose>
+						<c:when test="${fav=='1'}">
+							<a href="Controller?op=vafav" class="text-decoration-none"> <span
+							class="text-warning fs-1">&#9733;</span>
+							</a>
+						</c:when>
+						<c:otherwise>
+							<a href="Controller?op=vafav" class="text-decoration-none"> <span
+								class="text-secondary fs-1">&#9733;</span>
+							</a>
+						</c:otherwise>
+					</c:choose>				
 				</div>
 			</div>
 			<div class="container">
@@ -71,10 +80,23 @@
 									</div>
 									<div>
 										<div class="card-body">
-											<h4 class="card-title">${bici.marca}</h4>
+											<h4 class="card-title">${bici.nombreMarca}</h4>
 											<p>${bici.descripcion }</p>
 											<p>${bici.precio }</p>
-											<span class="text-secondary fs-1">&#9733;</span>
+											<c:choose>
+												<c:when test="${bici.fav==0}">
+													<a class="text-decoration-none" href="Controller?op=changefav&idbici=${bici.id}&newfav=1">
+														<span class="text-secondary fs-1 position-absolute bottom-0 end-0 m-3">&#9733;</span>
+													</a>
+												</c:when>
+												<c:otherwise>
+													<a class="text-decoration-none" href="Controller?op=changefav&idbici=${bici.id}&newfav=0">
+														<span class="text-warning fs-1 position-absolute bottom-0 end-0 m-3">&#9733;</span>
+													</a>
+												</c:otherwise>
+											</c:choose>
+												
+											
 										</div>
 									</div>
 								</div>

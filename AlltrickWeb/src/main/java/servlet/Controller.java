@@ -70,7 +70,53 @@ public class Controller extends HttpServlet {
 				request.getRequestDispatcher("home.jsp").forward(request, response);
 				break;	
 			case "vamarca":
-				break;			}
+				marca = request.getParameter("marca");
+				session.setAttribute("marca", marca);
+				order = (String)session.getAttribute("order");
+				fav = (String)session.getAttribute("fav");
+				bicis = new DaoBici().getBicis(con, marca, order, fav);
+				session.setAttribute("bicis", bicis);
+				
+				request.getRequestDispatcher("home.jsp").forward(request, response);
+				break;	
+			case "vaorder":
+				order = request.getParameter("order");
+				session.setAttribute("order", order);
+				marca = (String)session.getAttribute("marca");
+				fav = (String)session.getAttribute("fav");
+				bicis = new DaoBici().getBicis(con, marca, order, fav);
+				session.setAttribute("bicis", bicis);
+				
+				request.getRequestDispatcher("home.jsp").forward(request, response);
+				break;	
+			case "vafav":
+				fav = (String)session.getAttribute("fav");
+				if (fav.equals("%")) 
+					fav = "1";
+				else
+					fav = "%";
+				session.setAttribute("fav", fav);
+				marca = (String)session.getAttribute("marca");
+				order = (String)session.getAttribute("order");
+				bicis = new DaoBici().getBicis(con, marca, order, fav);
+				session.setAttribute("bicis", bicis);
+				
+				request.getRequestDispatcher("home.jsp").forward(request, response);
+				break;	
+			case "changefav":
+				String idbici = request.getParameter("idbici");
+				String newfav = request.getParameter("newfav");
+				new DaoBici().changeFav(Integer.parseInt(idbici), Integer.parseInt(newfav), con);
+				
+				marca = (String)session.getAttribute("marca");
+				order = (String)session.getAttribute("order");
+				fav = (String)session.getAttribute("fav");
+				bicis = new DaoBici().getBicis(con, marca, order, fav);
+				session.setAttribute("bicis", bicis);
+				
+				request.getRequestDispatcher("home.jsp").forward(request, response);
+				break;					
+		}
 
 	}
 
