@@ -17,8 +17,7 @@ public class DaoBici {
 		try {
 			st = con.createStatement();
 			String ordenSql = "select b.id,foto, marca, descripcion, precio, fav, nombre from bici b, marca m"+
-								" where marca = m.id and marca like '"
-								+marca+"' and fav like '"+fav+"' order by "+order;
+							  " where marca = m.id and marca like '"+marca+"' and fav like '"+fav+"' order by "+order;
 			rs = st.executeQuery(ordenSql);
 			while (rs.next()) {
 				Bici bici = new Bici();

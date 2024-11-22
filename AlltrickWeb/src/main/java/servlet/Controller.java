@@ -68,7 +68,7 @@ public class Controller extends HttpServlet {
 				session.setAttribute("marcas", marcas);
 				
 				request.getRequestDispatcher("home.jsp").forward(request, response);
-				break;	
+				break;
 			case "vamarca":
 				marca = request.getParameter("marca");
 				session.setAttribute("marca", marca);
@@ -78,7 +78,7 @@ public class Controller extends HttpServlet {
 				session.setAttribute("bicis", bicis);
 				
 				request.getRequestDispatcher("home.jsp").forward(request, response);
-				break;	
+				break;
 			case "vaorder":
 				order = request.getParameter("order");
 				session.setAttribute("order", order);
@@ -88,7 +88,7 @@ public class Controller extends HttpServlet {
 				session.setAttribute("bicis", bicis);
 				
 				request.getRequestDispatcher("home.jsp").forward(request, response);
-				break;	
+				break;
 			case "vafav":
 				fav = (String)session.getAttribute("fav");
 				if (fav.equals("%")) 
@@ -102,7 +102,7 @@ public class Controller extends HttpServlet {
 				session.setAttribute("bicis", bicis);
 				
 				request.getRequestDispatcher("home.jsp").forward(request, response);
-				break;	
+				break;
 			case "changefav":
 				String idbici = request.getParameter("idbici");
 				String newfav = request.getParameter("newfav");
@@ -115,7 +115,7 @@ public class Controller extends HttpServlet {
 				session.setAttribute("bicis", bicis);
 				
 				request.getRequestDispatcher("home.jsp").forward(request, response);
-				break;					
+				break;
 		}
 
 	}

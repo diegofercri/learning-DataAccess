@@ -11,7 +11,7 @@ import entities.Jugador;
 
 public class DaoJugador {
 
-	public ArrayList<Jugador> getJugadoresByEquipo(Connection con, int idequipo){
+	public ArrayList<Jugador> getJugadoresByEquipo(Connection con, int idequipo) {
 		ResultSet rs;
 		ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 

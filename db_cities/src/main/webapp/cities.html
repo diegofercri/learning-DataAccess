@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,43 +21,39 @@
         </div>
     </header>
     <main>
-        <div class="select-container">
-            <form class="form" action="" method="post">
-                <select class="form-select" name="marca" onchange="this.form.submit()">
-                    <option selected disabled>Cities</option>
-                    <option value="%">Todas</option>
-                    <c:forEach items="${marcas}" var="marca">
-                        <option value="${marca.id}">${marca.nombre}</option>
-                    </c:forEach>
-                </select>
-            </form>
-            <form class="form" action="" method="post">
-                <select class="form-select" name="marca" onchange="this.form.submit()">
-                    <option selected disabled>Routes</option>
-                    <option value="%">Todas</option>
-                    <c:forEach items="${marcas}" var="marca">
-                        <option value="${marca.id}">${marca.nombre}</option>
+        <div class="menu-container">
+            <a href="Controller?op=start" class="menu-button">
+                Cities
+            </a>
+            <form action="Controller?op=sendCityWithRoutes" method="post">
+                <select class="form-select" name="cityWithRoutes" onchange="this.form.submit()">
+                    <option selected disabled>Filter routes</option>
+                    <c:forEach items="${citiesListWithRoutes}" var="cityWithRoutes">
+                        <option value="${cityWithRoutes.id}">${cityWithRoutes.name}</option>
                     </c:forEach>
                 </select>
             </form>
         </div>
         <div class="card-container">
-            <a href="">
+            <c:forEach items="${citiesList}" var="city">
                 <div class="card-image">
                     <div class="card-image-container">
-                        <img src="/img/fotociudad.jpg" alt="A-Bomb (HAS) image">
+                        <img src="/img/fotociudad.jpg" alt="${city.name} image">
                     </div>
-                    <h5 class="card-image-title">A-Bomb (HAS)</h5>
-                    <p class="card-image-description">Rick Jones has been Hulk's best bud since day one, but now he's more
-                        than a friend... he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored
-                        skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a
-                        giant bowling ball of destruction!
-                    </p>
+                    <div>
+                        <h5 class="card-image-title">${city.name}</h5>
+                        <p class="card-image-description">${city.description}</p>
+                    </div>
                     <div class="card-image-container-2">
-                        <img src="/img/mapa.png" alt="A-Bomb (HAS) image">
+                        <img src="/img/mapa.png" alt="${city.name} map image">
+                    </div>
+                    <div class="card-image-container-bottom">
+                        <a href="${city.link}" class="card-button">
+                            Show More
+                        </a>
                     </div>
                 </div>
-            </a>
+            </c:forEach>
         </div>
     </main>
     <footer>

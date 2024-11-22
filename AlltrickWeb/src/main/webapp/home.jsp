@@ -32,8 +32,7 @@
 			<div class="row justify-content-center align-items-center py-3">
 				<div class="col-md-3 d-flex">
 					<form action="Controller?op=vamarca" method="post">
-						<select class="form-select" name="marca"
-							onchange="this.form.submit()">
+						<select class="form-select" name="marca" onchange="this.form.submit()">
 							<option selected disabled>Elija Marca</option>
 							<option value="%">Todas</option>
 							<c:forEach items="${marcas}" var="marca">
