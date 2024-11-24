@@ -7,7 +7,7 @@
     --c5: #f8b376;
     --c6: #f67c5a;
     --c7: #252525;
-    --c8: #505050;
+    --c8: #535353;
 }
 
 * {
@@ -323,7 +323,7 @@ a {
 }
 
 .rating-container {
-  background-color: var(--c4);
+  background-color: var(--c8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,15 +360,16 @@ a {
   text-transform: uppercase;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* Limitar a 2 líneas */
-  line-clamp: 2; /* Limitar a 2 líneas por compatibilidad */
+  -webkit-line-clamp: 1; /* Limitar a 1 líneas */
+  line-clamp: 1; /* Limitar a 1 líneas por compatibilidad */
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5; /* Ajustar la altura de línea */
-  max-height: calc(1.5em * 2); /* Ajustar el alto máximo al número de líneas */
+  max-height: calc(1.5em * 1); /* Ajustar el alto máximo al número de líneas */
 }
 
 .card-image-description {
+  color: var(--c2);
   margin: 5px 0 0 0;
   padding: 0;
   width: 100%;

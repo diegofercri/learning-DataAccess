@@ -13,8 +13,10 @@ import java.util.ArrayList;
 
 import connection.ConnectionClass;
 import daos.CityDao;
+import daos.RatingDao;
 import daos.RouteDao;
 import entities.City;
+import entities.Rating;
 import entities.Route;
 
 /**
@@ -68,6 +70,13 @@ public class Controller extends HttpServlet {
 
 				request.getRequestDispatcher("routes.jsp").forward(request, response);
 				break;
+			case "rating":
+				String rating = request.getParameter("rating");
+				int routeid = Integer.parseInt(request.getParameter("routeid"));
+				new RatingDao().setRating(new Rating(Integer.parseInt(rating), routeid, 0), con);
+
+				request.getRequestDispatcher("home.jsp").forward(request, response);
+				break;
 		}
 
 	}
@@ -76,7 +85,6 @@ public class Controller extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

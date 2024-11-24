@@ -1,6 +1,7 @@
 package daos;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,5 +29,21 @@ public class RatingDao {
 			System.out.println("DAO Error.\n"+e.getMessage());
 		}
 		return rating;
+	}
+	public void setRating(Rating rating, Connection con) {
+		String ordenSQL;
+		ordenSQL = "insert into punto values(?,?,?)";
+		PreparedStatement st;
+		try {
+			st = con.prepareStatement(ordenSQL);
+			st.setInt(1, rating.getPoints());
+			st.setInt(2, rating.getRoute());
+			st.setInt(3, rating.getId());
+			st.executeUpdate();
+			st.close();
+		} catch (SQLException e) {
+			System.out.println("DAO Error on Rating insert.\n"+e.getMessage());
+		}
+
 	}
 }

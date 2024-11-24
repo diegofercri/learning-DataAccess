@@ -53,19 +53,19 @@
 							</div>
 							<div class="card-image-container-bottom">
 								<div class="rating-container">
-									<a href="Controller?op=rating&rating=1&rutaid=${ruta.id}">
+									<a href="Controller?op=rating&rating=1&routeid=${route.id}">
 										<img src="./assets/star-b.svg" alt="Black Star Icon" class="rating-star" data-value="1">
 									</a>
-									<a href="Controller?op=rating&rating=2&rutaid=${ruta.id}">
+									<a href="Controller?op=rating&rating=2&routeid=${route.id}">
 										<img src="./assets/star-b.svg" alt="Black Star Icon" class="rating-star" data-value="2">
 									</a>
-									<a href="Controller?op=rating&rating=3&rutaid=${ruta.id}">
+									<a href="Controller?op=rating&rating=3&routeid=${route.id}">
 										<img src="./assets/star-b.svg" alt="Black Star Icon" class="rating-star" data-value="3">
 									</a>
-									<a href="Controller?op=rating&rating=4&rutaid=${ruta.id}">
+									<a href="Controller?op=rating&rating=4&routeid=${route.id}">
 										<img src="./assets/star-b.svg" alt="Black Star Icon" class="rating-star" data-value="4">
 									</a>
-									<a href="Controller?op=rating&rating=5&rutaid=${ruta.id}">
+									<a href="Controller?op=rating&rating=5&routeid=${route.id}">
 										<img src="./assets/star-b.svg" alt="Black Star Icon" class="rating-star" data-value="5">
 									</a>
 								</div>
