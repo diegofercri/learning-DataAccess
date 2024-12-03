@@ -232,8 +232,8 @@ a {
   padding: 10px;
   min-height: 100px;
   width: 100%;
-  max-height: 500px;
-  max-width: 500px;
+  max-height: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -83,22 +83,22 @@
                             <div class="card-image-container">
                                 <img src="${place.image}" alt="${place.name} image">
                                 <div class="card-image-fav-container">
-                                	<c:choose>
-										<c:when test="${place.fav==0}">
-											<a href="Controller?op=changefav&placeid=${place.id}&newfav=1" class="card-button">
-		                                        <div class="fav-icon-container-b">
-		                                            <img src="./assets/heart-b.svg" alt="Filled Heart Icon" class="fav-icon">
-		                                        </div>
-	                                    	</a>
-										</c:when>
-										<c:otherwise>
-											<a href="Controller?op=changefav&placeid=${place.id}&newfav=0" class="card-button">
-		                                        <div class="fav-icon-container">
-	                                            	<img src="./assets/heart.svg" alt="Empty Heart Icon" class="fav-icon">
-	                                        	</div>
-	                                    	</a>
-										</c:otherwise>
-									</c:choose>
+                                    <c:choose>
+                                        <c:when test="${place.fav==0}">
+                                            <a href="Controller?op=changefav&placeid=${place.id}&newfav=1">
+                                                <div class="fav-icon-container-b">
+                                                    <img src="./assets/heart-b.svg" alt="Filled Heart Icon" class="fav-icon">
+                                                </div>
+                                            </a>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <a href="Controller?op=changefav&placeid=${place.id}&newfav=0">
+                                                <div class="fav-icon-container">
+                                                    <img src="./assets/heart.svg" alt="Empty Heart Icon" class="fav-icon">
+                                                </div>
+                                            </a>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </div>
                             </div>
                             <div>
