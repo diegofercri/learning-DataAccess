@@ -40,6 +40,7 @@ public class DaoBici {
 		}
 		return listaBicis;
 	}
+	
 	public void changeFav(int idbici, int fav, Connection con) {
 		
 		String ordenSQL = "update bici set fav=? where id=?";
@@ -55,7 +56,6 @@ public class DaoBici {
 			System.out.println("Error al cambiar fav\n"+e.getMessage());
 		}
 	}
-
 }
 
 

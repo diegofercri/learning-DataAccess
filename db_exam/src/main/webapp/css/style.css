@@ -242,12 +242,6 @@ a {
   position: relative;
 }
 
-.card-image:hover {
-  scale: 1.02;
-  transition: all 0.2s ease-in-out;
-}
-
-
 .card-image-container {
   width: 100%;
   height: 176px;
@@ -415,11 +409,7 @@ a {
   margin: 15px;
   padding: 9px 8px 8px 8px;
   border-radius: 100%;
-  background-color: var(--c9);
-}
-
-.fav-icon-container-b {
-  display: none;
+  background-color: var(--c7);
 }
 
 .fav-icon {

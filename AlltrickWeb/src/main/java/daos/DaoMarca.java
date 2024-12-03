@@ -33,5 +33,4 @@ public class DaoMarca {
 		}
 		return listaMarcas;
 	}
-
 }
