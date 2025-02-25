@@ -110,54 +110,16 @@
     <!-- Cards Allergens Section -->
     <section class="container my-5">
         <div class="row">
-            <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
-                <div class="card text-center align-items-center" style="width: 15rem;">
-                    <img src="./img/alergeno.jpg" alt="Card 1" class="mt-4" style="height: 50px; width: 50px;">
-                    <div class="card-body">
-                        <p class="card-text text-uppercase fw-bold">Alergeno</p>
+            <c:forEach items="${alergenos}" var="alergeno">
+                <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
+                    <div class="card text-center align-items-center" style="width: 15rem;">
+                        <img src="${alergeno.foto}" alt="${alergeno.nombre}" class="mt-4" style="height: 50px; width: 50px;">
+                        <div class="card-body">
+                            <p class="card-text text-uppercase fw-bold">${alergeno.nombre}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
-                <div class="card text-center align-items-center" style="width: 15rem;">
-                    <img src="./img/alergeno.jpg" alt="Card 2" class="mt-4" style="height: 50px; width: 50px;">
-                    <div class="card-body">
-                        <p class="card-text text-uppercase fw-bold">Alergeno</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
-                <div class="card text-center align-items-center" style="width: 15rem;">
-                    <img src="./img/alergeno.jpg" alt="Card 3" class="mt-4" style="height: 50px; width: 50px;">
-                    <div class="card-body">
-                        <p class="card-text text-uppercase fw-bold">Alergeno</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
-                <div class="card text-center align-items-center" style="width: 15rem;">
-                    <img src="./img/alergeno.jpg" alt="Card 4" class="mt-4" style="height: 50px; width: 50px;">
-                    <div class="card-body">
-                        <p class="card-text text-uppercase fw-bold">Alergeno</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
-                <div class="card text-center align-items-center" style="width: 15rem;">
-                    <img src="./img/alergeno.jpg" alt="Card 5" class="mt-4" style="height: 50px; width: 50px;">
-                    <div class="card-body">
-                        <p class="card-text text-uppercase fw-bold">Alergeno</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-sm-4 mb-4 d-flex justify-content-center align-items-center">
-                <div class="card text-center align-items-center" style="width: 15rem;">
-                    <img src="./img/alergeno.jpg" alt="Card 6" class="mt-4" style="height: 50px; width: 50px;">
-                    <div class="card-body">
-                        <p class="card-text text-uppercase fw-bold">Alergeno</p>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
         </div>
     </section>
 
