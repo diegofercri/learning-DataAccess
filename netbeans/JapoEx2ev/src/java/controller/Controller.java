@@ -37,6 +37,12 @@ public class Controller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String op = request.getParameter("op");
+                Query q;
+                List alergenos;
+				List categorias;
+                List platos;
+                String msg;
+                EntityTransaction t;
 		
 		// Singleton
 		EntityManager em = (EntityManager) session.getAttribute("em");
@@ -48,6 +54,14 @@ public class Controller extends HttpServlet {
 		
 		switch (op) {
 		case "inicio": {
+				alergenosList = 
+				citiesListWithRoutes = new CityDao().getCitiesWithRoutes(con);
+				
+				session.setAttribute("citiesList", citiesList);
+				session.setAttribute("citiesListWithRoutes", citiesListWithRoutes);
+				
+				request.getRequestDispatcher("home.jsp").forward(request, response);
+				break;
 			// actuar en consecuencia
 			// .........
 			// session.setAttribute("Key", objeto);

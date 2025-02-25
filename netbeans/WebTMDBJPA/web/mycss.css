@@ -1,0 +1,30 @@
+nav a {
+    color: white !important;
+    font-size: 24px;
+}
+.active {
+    background-color: #D8E8FE;
+    color: #000040 !important;
+}
+
+/* 
+    Created on : 11-ene-2018, 12:01:25
+    Author     : pacopulido
+*/
+.rating {
+    font-size: 0 ;
+    display: inline-block ;
+}
+.rating a {
+    text-decoration: none ;
+    display: inline-block ;
+    font-size: 32px ;
+    font-size: 2rem ;    
+    color: #888 ;
+}
+.rating:hover a {
+    color: gold ;
+}
+.rating > a:hover ~ a {
+    color: #888 ;
+}
